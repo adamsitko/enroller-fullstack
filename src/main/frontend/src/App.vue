@@ -44,7 +44,11 @@
 
             },
                         register(user) {
-                            alert(user.login);
+                             this.$http.post('participants', user)
+                                 .then(response => {
+                                     // udało się
+                                 })
+                                 .catch(response => {});
 
                         },
             logout() {
